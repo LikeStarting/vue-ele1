@@ -5,7 +5,7 @@ module.exports = {
     assetsDir: 'assets',
     indexPath: 'index.html',
     productionSourceMap: false,
-    lintOnSave: process.env.NODE_ENV !== 'production',
+    lintOnSave: false,  //lintOnSave: process.env.NODE_ENV !== 'production'
     runtimeCompiler: true,
     filenameHashing: true,
     //webpack配置

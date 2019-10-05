@@ -143,9 +143,10 @@ export default {
             this.selectedIndex = i
             this.classifyArr.forEach((item,index) => {
                 if (i === index) {
-                    return item.active == true
+                    item.active = true
+                } else {
+                    item.active = false
                 }
-                item.active = false
             })
         }
     },

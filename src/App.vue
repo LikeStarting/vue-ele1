@@ -12,7 +12,9 @@
         <router-link to="/seller">商家</router-link>
       </div>
     </div>
-    <router-view></router-view>
+    <keep-alive>
+      <router-view :seller="seller"></router-view>
+    </keep-alive>
   </div>
 </template>
 
@@ -24,7 +26,7 @@ export default {
       seller: {}
     }
   },
-  created() {
+  created () {
     this.axios.get('assets/data.json').then(res => {
       this.seller = res.data.seller
     })
